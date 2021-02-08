@@ -255,10 +255,20 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 // "1900 - 1999"
 //  0123456789
 
+// function get20s(arry) {
+//   let nineteenCent = [];
+//   for (let i = 0; i < arry.length; i++) {
+//     if (arry[i].years[1] === 9 && arry[i].years[8] === 9) {
+//       nineteenCent.push(arry[i].name);
+//     }
+//   }
+//   return nineteenCent;
+// }
+
 function get20s(arry) {
   let nineteenCent = [];
   for (let i = 0; i < arry.length; i++) {
-    if (arry[i].years[1] === 9 && arry[i].years[8] === 9) {
+    if (parseInt(arry[i].years) > 1899) {
       nineteenCent.push(arry[i].name);
     }
   }
